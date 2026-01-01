@@ -1,0 +1,11 @@
+name: run commands
+on: 
+  workflow_dispatch:
+jobs:
+    clone-my-repo:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: ls -lrt
+            - run: pwd && ls -a
+            - run: echo "Hello Shruti"
